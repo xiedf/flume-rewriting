@@ -35,6 +35,10 @@ public class TimeHandlerFactory {
             case "nginxError" :
             case "semiStandardBySlash" :
                 return new SemiStandardTimeHandler("slash");
+            case "elasticsearch" :
+                return new ElasticSearchTimeHandler();
+            case "mongodb" :
+                return new MongodbTimeHandler();
             case "mysqlError" :
             case "semiStandardByMinus" :
                 return new SemiStandardTimeHandler("minus");
